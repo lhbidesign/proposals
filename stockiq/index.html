@@ -1095,23 +1095,52 @@ img.avatar {
   .team-grid { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 640px) {
+  /* Typography */
+  br.mob { display: inline; }
   .capabilities-grid { grid-template-columns: 1fr; }
   .about-stats { grid-template-columns: repeat(2, 1fr); gap: 24px; }
   .platform-compare { grid-template-columns: 1fr; }
-  .hero-title .row-two { padding-left: 0; }
   .platform-rec, .opportunity { padding: 40px 24px; }
-  .hero { padding: 80px 0 48px; }
   .section { padding: 64px 0; }
-  .hero-title .bolt-inline { width: 1em !important; height: 1em !important; vertical-align: -0.1em !important; }
   .contact-title { font-size: clamp(40px, 9vw, 160px); }
   .logo-lockup { padding: 20px 24px; }
-  .team-grid { grid-template-columns: repeat(2, 1fr); }
-  .hero-meta { gap: 16px; margin-bottom: 40px; }
   .hero-footer { margin-top: 48px; }
   #pw-input { width: min(320px, calc(100vw - 48px)) !important; }
   .next-steps { gap: 40px; }
   .phase-num { font-size: 36px; }
+
+  /* Nav: hide CTA, fix logo, hamburger only */
+  .nav-cta { display: none; }
+  .nav-logo { flex-shrink: 0; }
+  .nav-logo-img { height: 22px; }
+  .menu-toggle { color: var(--ink); }
+
+  /* Hero: title first, meta below */
+  .hero { padding: 90px 0 48px; }
+  .hero .container { display: flex; flex-direction: column; }
+  .hero-title { order: 1; }
+  .hero-meta { order: 2; margin-top: 40px; margin-bottom: 0; gap: 16px; }
+  .hero-subtitle { order: 3; }
+  .hero-footer { order: 4; }
+  .hero-title .row-two { padding-left: 0; }
+  .hero-title .bolt-inline { width: 1em !important; height: 1em !important; vertical-align: -0.1em !important; }
+
+  /* Team: 1 per row */
+  .team-grid { grid-template-columns: 1fr; }
+
+  /* Case studies: flush left, 01 above title */
+  .case-study {
+    grid-template-columns: 1fr !important;
+    grid-template-areas: "num" "title" "desc" "arrow" !important;
+    padding: 24px 0;
+  }
+  .case-num { padding-top: 0; margin-bottom: 8px; }
+  .case-arrow { justify-self: start !important; margin-top: 8px; }
+  .case-quote { grid-column: 1 / -1; }
 }
+
+/* Mobile-only line breaks */
+br.mob { display: none; }
 
 /* ============ ANIMATION: fade-up on scroll ============ */
 .fade-up { opacity: 0; transform: translateY(24px); transition: opacity 0.8s ease, transform 0.8s ease; }
@@ -1231,7 +1260,13 @@ img.avatar {
       <a href="#investment" class="nav-link">Investment</a>
     </div>
     <a href="#contact" class="nav-cta">Let's talk →</a>
-    <button class="menu-toggle" aria-label="Open menu">Menu ☰</button>
+    <button class="menu-toggle" aria-label="Open menu">
+      <svg width="22" height="16" viewBox="0 0 22 16" fill="none">
+        <rect width="22" height="2" rx="1" fill="currentColor"/>
+        <rect y="7" width="22" height="2" rx="1" fill="currentColor"/>
+        <rect y="14" width="22" height="2" rx="1" fill="currentColor"/>
+      </svg>
+    </button>
   </div>
 </nav>
 
@@ -1359,7 +1394,7 @@ img.avatar {
   <div class="container">
     <div class="section-header">
       <div class="overline">03 / Project Team</div>
-      <h2 class="section-title">The team <span class="serif-accent">behind the work.</span></h2>
+      <h2 class="section-title">The team<br class="mob"> <span class="serif-accent">behind the work.</span></h2>
     </div>
     <p class="capabilities-intro muted" style="margin-bottom: 60px;">
       We assembled this team specifically for StockIQ. Little House leads design and project management, with our strategy and development partners brought in for their depth in each area. You'll always know who's responsible for what.
@@ -1438,7 +1473,7 @@ img.avatar {
   <div class="container">
     <div class="section-header">
       <div class="overline">04 / Capabilities</div>
-      <h2 class="section-title">What we do <span class="serif-accent">very well.</span></h2>
+      <h2 class="section-title">What we do<br class="mob"> <span class="serif-accent">very well.</span></h2>
     </div>
     <p class="capabilities-intro muted">
       Brand strategy, identity, copywriting, UX, and development, all in one place. For StockIQ, that means the story we build in strategy carries directly into design, and from design straight into the build. Nothing gets lost in translation.
@@ -1502,7 +1537,7 @@ img.avatar {
   <div class="container">
     <div class="section-header">
       <div class="overline">05 / Selected Work</div>
-      <h2 class="section-title">Brands we've <span class="serif-accent">helped shine.</span></h2>
+      <h2 class="section-title">Brands we've<br class="mob"> <span class="serif-accent">helped shine.</span></h2>
     </div>
 
     <div class="case-studies">
@@ -1563,7 +1598,7 @@ img.avatar {
   <div class="container">
     <div class="section-header">
       <div class="overline">06 / Our Approach</div>
-      <h2 class="section-title">Strategy informs design.<br><span class="serif-accent">Design drives performance.</span></h2>
+      <h2 class="section-title">Strategy<br class="mob"> informs design.<br><span class="serif-accent">Design drives<br class="mob"> performance.</span></h2>
     </div>
 
     <div class="opportunity">
