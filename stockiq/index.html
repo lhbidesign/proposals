@@ -3,10 +3,11 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Little House × StockIQ — Rebrand & Website Redesign Response</title>
+<title>Little House × StockIQ, Rebrand & Website Redesign Response</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Archivo:wght@400;600;700;800;900&family=Archivo+Black&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://use.typekit.net/wdg2gnk.css">
 <style>
 /* ============ RESET & BASE ============ */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -25,7 +26,7 @@ body {
   --cream-dark: #E4E1D4;
   --ink: #0A0A0A;
   --ink-soft: #1C1C1C;
-  --muted: #6B6B63;
+  --muted: #020202;
   --lime: #D4FF3F;
   --lime-dark: #B8E034;
   --divider: #D9D5C7;
@@ -36,19 +37,20 @@ a { color: inherit; text-decoration: none; }
 
 /* ============ TYPOGRAPHY ============ */
 .display {
-  font-family: 'Archivo', sans-serif;
-  font-weight: 900;
+  font-family: 'allotrope', sans-serif;
+  font-weight: 400;
   letter-spacing: -0.035em;
-  line-height: 0.92;
-  text-transform: uppercase;
+  line-height: 0.95;
+  color: #020202;
 }
 .serif-accent { font-family: 'Instrument Serif', serif; font-style: italic; font-weight: 400; text-transform: none; letter-spacing: -0.01em; }
 .overline {
-  font-family: 'Archivo', sans-serif;
-  font-weight: 700;
+  font-family: 'allotrope', sans-serif;
+  font-weight: 400;
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 0.18em;
+  color: #020202;
 }
 .body-lg { font-size: 20px; line-height: 1.55; color: var(--ink-soft); }
 .body-md { font-size: 16px; line-height: 1.6; color: var(--ink-soft); }
@@ -111,7 +113,7 @@ section { position: relative; }
   align-items: center;
   transition: opacity 0.2s ease;
 }
-.nav-logo:hover { opacity: 0.7; }
+.nav-logo:hover { opacity: 1; }
 .nav-logo-img {
   display: block;
   height: 28px;
@@ -161,8 +163,8 @@ section { position: relative; }
   display: flex;
   align-items: center;
   gap: 4px;
-  font-family: 'Archivo Black', 'Archivo', sans-serif;
-  font-weight: 900;
+  font-family: 'allotrope', sans-serif;
+  font-weight: 400;
   font-size: clamp(22px, 2.6vw, 32px);
   letter-spacing: -0.025em;
   text-transform: uppercase;
@@ -212,8 +214,8 @@ section { position: relative; }
   line-height: 1;
 }
 .lockup-stockiq-name {
-  font-family: 'Archivo Black', 'Archivo', sans-serif;
-  font-weight: 900;
+  font-family: 'allotrope', sans-serif;
+  font-weight: 400;
   font-size: clamp(22px, 2.6vw, 32px);
   letter-spacing: -0.02em;
   text-transform: uppercase;
@@ -262,6 +264,7 @@ section { position: relative; }
   margin: 0;
 }
 .hero-title .row { display: block; }
+.hero-title .row-two { margin-top: -0.35em; }
 .hero-title .row-two { padding-left: 8vw; }
 .hero-title .bolt-inline {
   display: inline-block;
@@ -303,15 +306,17 @@ section { position: relative; }
   display: inline-flex; align-items: center; gap: 8px;
   font-size: 13px; font-weight: 500;
   color: var(--muted);
+  cursor: pointer;
+  background: none; border: none; padding: 0;
 }
-.scroll-cue .dot {
-  width: 8px; height: 8px; border-radius: 50%;
-  background: var(--lime);
-  animation: pulse 2s infinite;
+.scroll-cue .arrow-down {
+  width: 20px; height: 20px;
+  display: flex; align-items: center; justify-content: center;
+  animation: bounce 2s infinite;
 }
-@keyframes pulse {
-  0%, 100% { transform: scale(1); opacity: 1; }
-  50% { transform: scale(1.5); opacity: 0.4; }
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(4px); }
 }
 
 /* ============ SECTION CHROME ============ */
@@ -334,8 +339,8 @@ section { position: relative; }
 .section-header .overline { padding-top: 6px; color: var(--muted); }
 .section-dark .section-header .overline { color: var(--lime); }
 .section-title {
-  font-family: 'Archivo', sans-serif;
-  font-weight: 800;
+  font-family: 'allotrope', sans-serif;
+  font-weight: 400;
   font-size: clamp(40px, 5vw, 72px);
   line-height: 1;
   letter-spacing: -0.025em;
@@ -358,7 +363,7 @@ section { position: relative; }
   font-weight: 400;
   letter-spacing: -0.015em;
 }
-.intro-letter-body p strong { font-weight: 700; }
+.intro-letter-body p strong { font-weight: 400; }
 .intro-letter-body p .hl { background: var(--lime); padding: 0 4px; }
 
 /* ============ ABOUT ============ */
@@ -377,8 +382,8 @@ section { position: relative; }
   border-top: 1px solid #333;
 }
 .stat-value {
-  font-family: 'Archivo', sans-serif;
-  font-weight: 900;
+  font-family: 'allotrope', sans-serif;
+  font-weight: 400;
   font-size: clamp(48px, 5vw, 72px);
   line-height: 1;
   letter-spacing: -0.03em;
@@ -417,11 +422,11 @@ section { position: relative; }
   background: var(--lime);
   color: var(--ink);
   display: flex; align-items: center; justify-content: center;
-  font-family: 'Archivo', sans-serif;
-  font-weight: 800;
+  font-family: 'allotrope', sans-serif;
+  font-weight: 600;
   font-size: 14px;
 }
-.value-card-title { font-weight: 700; font-size: 18px; letter-spacing: -0.01em; }
+.value-card-title { font-weight: 400; font-size: 18px; letter-spacing: -0.01em; }
 .value-card p { font-size: 15px; color: #C4C4BE; line-height: 1.55; }
 
 /* ============ TEAM ============ */
@@ -437,8 +442,8 @@ section { position: relative; }
   border-bottom: 1px solid var(--divider);
 }
 .team-block-title h3 {
-  font-family: 'Archivo', sans-serif;
-  font-weight: 800;
+  font-family: 'allotrope', sans-serif;
+  font-weight: 400;
   font-size: clamp(24px, 2.4vw, 32px);
   letter-spacing: -0.02em;
 }
@@ -463,30 +468,21 @@ section { position: relative; }
   width: 72px; height: 72px;
   border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
-  font-family: 'Archivo', sans-serif;
-  font-weight: 800;
+  font-family: 'allotrope', sans-serif;
+  font-weight: 400;
   font-size: 22px;
   letter-spacing: -0.02em;
   margin-bottom: 20px;
   position: relative;
 }
-.avatar.lime { background: var(--lime); color: var(--ink); }
-.avatar.ink { background: var(--ink); color: var(--cream); }
-.avatar.cream { background: var(--cream-dark); color: var(--ink); border: 1.5px solid var(--ink); }
-.avatar .badge-bolt {
-  position: absolute;
-  bottom: -4px; right: -4px;
-  width: 22px; height: 22px;
-  background: var(--lime);
-  border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
-  z-index: 2;
-  border: 2px solid var(--cream);
+img.avatar {
+  object-fit: cover;
+  object-position: center top;
+  display: block;
 }
-.avatar .badge-bolt svg { width: 9px; height: 14px; fill: var(--ink); }
 .team-name {
-  font-family: 'Archivo', sans-serif;
-  font-weight: 700;
+  font-family: 'allotrope', sans-serif;
+  font-weight: 400;
   font-size: 18px;
   letter-spacing: -0.015em;
   margin-bottom: 4px;
@@ -530,8 +526,8 @@ section { position: relative; }
   transition: all 0.25s ease;
 }
 .capability-tile h4 {
-  font-family: 'Archivo', sans-serif;
-  font-weight: 700;
+  font-family: 'allotrope', sans-serif;
+  font-weight: 400;
   font-size: 22px;
   letter-spacing: -0.02em;
   margin-bottom: 8px;
@@ -575,12 +571,12 @@ section { position: relative; }
   padding-bottom: 1px;
 }
 .case-study:hover .case-link-cue { background: var(--lime); }
-.case-study:hover { background: #E8E5D9; padding-left: 34px; padding-right: 34px; }
+.case-study:hover { background: #E8E5D9; }
 .case-study:first-of-type { border-top: 1px solid var(--divider); }
-.case-num { font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 14px; color: var(--muted); letter-spacing: 0.1em; padding-top: 4px; }
+.case-num { font-family: 'allotrope', sans-serif; font-weight: 400; font-size: 14px; color: var(--muted); letter-spacing: 0.1em; padding-top: 4px; }
 .case-title {
-  font-family: 'Archivo', sans-serif;
-  font-weight: 800;
+  font-family: 'allotrope', sans-serif;
+  font-weight: 400;
   font-size: clamp(28px, 3.2vw, 44px);
   line-height: 1;
   letter-spacing: -0.025em;
@@ -631,8 +627,8 @@ section { position: relative; }
   margin-bottom: 80px;
 }
 .opportunity-quote {
-  font-family: 'Archivo', sans-serif;
-  font-weight: 800;
+  font-family: 'allotrope', sans-serif;
+  font-weight: 400;
   font-size: clamp(26px, 3vw, 44px);
   line-height: 1.1;
   letter-spacing: -0.025em;
@@ -649,7 +645,7 @@ section { position: relative; }
   flex-shrink: 0;
   margin-top: 2px;
 }
-.opportunity-point h5 { font-weight: 700; font-size: 16px; margin-bottom: 2px; }
+.opportunity-point h5 { font-weight: 400; font-size: 16px; margin-bottom: 2px; }
 .opportunity-point p { font-size: 14px; color: var(--ink-soft); line-height: 1.5; }
 
 .phases {
@@ -676,8 +672,8 @@ section { position: relative; }
 .phase.expanded .phase-num { color: var(--lime); }
 .phase.expanded .phase-meta { color: #8A8A82; }
 .phase-num {
-  font-family: 'Archivo', sans-serif;
-  font-weight: 900;
+  font-family: 'allotrope', sans-serif;
+  font-weight: 600;
   font-size: 48px;
   line-height: 1;
   letter-spacing: -0.03em;
@@ -685,8 +681,8 @@ section { position: relative; }
   transition: color 0.25s ease;
 }
 .phase-title {
-  font-family: 'Archivo', sans-serif;
-  font-weight: 700;
+  font-family: 'allotrope', sans-serif;
+  font-weight: 400;
   font-size: 26px;
   line-height: 1.1;
   letter-spacing: -0.02em;
@@ -719,19 +715,19 @@ section { position: relative; }
 }
 .platform-rec-badge {
   display: inline-flex; align-items: center; gap: 8px;
-  background: rgba(212, 255, 63, 0.15);
-  color: var(--lime);
+  background: #D4FF3F;
+  color: #020202;
   padding: 8px 16px;
   border-radius: 100px;
   font-size: 12px;
-  font-weight: 700;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   margin-bottom: 24px;
 }
 .platform-rec h3 {
-  font-family: 'Archivo', sans-serif;
-  font-weight: 800;
+  font-family: 'allotrope', sans-serif;
+  font-weight: 400;
   font-size: clamp(40px, 4vw, 56px);
   line-height: 1;
   letter-spacing: -0.025em;
@@ -751,8 +747,8 @@ section { position: relative; }
 }
 .platform-compare .col { }
 .platform-compare .col-head {
-  font-family: 'Archivo', sans-serif;
-  font-weight: 800;
+  font-family: 'allotrope', sans-serif;
+  font-weight: 400;
   font-size: 20px;
   margin-bottom: 16px;
   letter-spacing: -0.01em;
@@ -779,7 +775,7 @@ section { position: relative; }
   display: flex; align-items: start; gap: 8px;
 }
 .platform-compare li:first-of-type { border-top: none; }
-.platform-compare li::before { content: '→'; color: var(--lime); font-weight: 700; }
+.platform-compare li::before { content: '→'; color: var(--lime); font-weight: 400; }
 
 /* ============ TIMELINE ============ */
 .timeline-track {
@@ -803,8 +799,8 @@ section { position: relative; }
   background: var(--cream);
   border: 2px solid var(--ink);
   display: flex; align-items: center; justify-content: center;
-  font-family: 'Archivo', sans-serif;
-  font-weight: 800;
+  font-family: 'allotrope', sans-serif;
+  font-weight: 700;
   font-size: 13px;
   position: relative;
   z-index: 2;
@@ -814,8 +810,8 @@ section { position: relative; }
 .tl-item .month {
   display: block;
   margin-top: 16px;
-  font-family: 'Archivo', sans-serif;
-  font-weight: 700;
+  font-family: 'allotrope', sans-serif;
+  font-weight: 400;
   font-size: 14px;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -840,8 +836,8 @@ section { position: relative; }
   border-left: 3px solid var(--lime);
 }
 .milestone .date {
-  font-family: 'Archivo', sans-serif;
-  font-weight: 800;
+  font-family: 'allotrope', sans-serif;
+  font-weight: 400;
   font-size: 15px;
   color: var(--ink);
   margin-bottom: 6px;
@@ -894,30 +890,30 @@ section { position: relative; }
   color: var(--ink);
 }
 .invest-row .line-title {
-  font-family: 'Archivo', sans-serif;
-  font-weight: 700;
+  font-family: 'allotrope', sans-serif;
+  font-weight: 400;
   font-size: 17px;
   letter-spacing: -0.01em;
 }
 .invest-row .line-desc { font-size: 12px; margin-top: 4px; color: #A8A8A0; }
 .invest-row.total .line-desc { color: rgba(10,10,10,0.6); }
 .invest-row .line-price {
-  font-family: 'Archivo', sans-serif;
-  font-weight: 800;
+  font-family: 'allotrope', sans-serif;
+  font-weight: 400;
   font-size: 20px;
   letter-spacing: -0.02em;
 }
 .invest-row.total .line-price { font-size: 32px; }
 
 .retainer-card {
-  background: rgba(212, 255, 63, 0.06);
-  border: 1px solid rgba(212, 255, 63, 0.2);
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
   border-radius: 20px;
   padding: 32px;
 }
 .retainer-card h4 {
-  font-family: 'Archivo', sans-serif;
-  font-weight: 800;
+  font-family: 'allotrope', sans-serif;
+  font-weight: 400;
   font-size: 20px;
   margin-bottom: 4px;
   color: var(--lime);
@@ -933,7 +929,7 @@ section { position: relative; }
 .retainer-tier:first-of-type { border-top: none; }
 .retainer-tier .tier-name { font-weight: 600; font-size: 15px; }
 .retainer-tier .tier-desc { font-size: 12px; color: #8A8A82; margin-top: 2px; }
-.retainer-tier .tier-price { font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 17px; }
+.retainer-tier .tier-price { font-family: 'allotrope', sans-serif; font-weight: 400; font-size: 17px; }
 
 /* ============ QUESTIONS ============ */
 .questions-grid {
@@ -952,10 +948,10 @@ section { position: relative; }
   align-items: start;
 }
 .question-card .q-num {
-  font-family: 'Archivo', sans-serif;
-  font-weight: 900;
+  font-family: 'allotrope', sans-serif;
+  font-weight: 400;
   font-size: 20px;
-  color: var(--lime-dark);
+  color: var(--ink);
   line-height: 1;
 }
 .question-card p { font-size: 16px; line-height: 1.5; color: var(--ink); }
@@ -966,12 +962,11 @@ section { position: relative; }
   padding: 80px 0 40px;
 }
 .contact-title {
-  font-family: 'Archivo', sans-serif;
-  font-weight: 900;
+  font-family: 'allotrope', sans-serif;
+  font-weight: 400;
   font-size: clamp(56px, 9vw, 160px);
-  line-height: 0.92;
+  line-height: 0.95;
   letter-spacing: -0.035em;
-  text-transform: uppercase;
 }
 .contact-title .bolt-inline {
   display: inline-block;
@@ -1021,11 +1016,11 @@ section { position: relative; }
   color: var(--ink);
   border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
-  font-family: 'Archivo', sans-serif;
-  font-weight: 900;
+  font-family: 'allotrope', sans-serif;
+  font-weight: 600;
   font-size: 16px;
 }
-.next-step-card h5 { font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 18px; margin-bottom: 8px; letter-spacing: -0.01em; }
+.next-step-card h5 { font-family: 'allotrope', sans-serif; font-weight: 400; font-size: 18px; margin-bottom: 8px; letter-spacing: -0.01em; }
 .next-step-card p { font-size: 14px; color: #A8A8A0; line-height: 1.5; }
 
 /* ============ FOOTER ============ */
@@ -1043,7 +1038,7 @@ section { position: relative; }
   border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 .footer-wordmark {
-  font-family: 'Archivo Black', sans-serif;
+  font-family: 'allotrope', sans-serif;
   font-size: clamp(40px, 6vw, 90px);
   line-height: 1;
   letter-spacing: -0.03em;
@@ -1054,7 +1049,7 @@ section { position: relative; }
 .footer-logo {
   display: block;
   width: 100%;
-  max-width: 460px;
+  max-width: 230px;
   height: auto;
 }
 .footer-contact { display: flex; flex-direction: column; gap: 12px; }
@@ -1078,6 +1073,7 @@ section { position: relative; }
 /* ============ RESPONSIVE ============ */
 @media (max-width: 1100px) {
   .nav-links { display: none; }
+  .nav-inner { padding: 16px 24px; }
   .menu-toggle { display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; }
   .about-grid, .opportunity, .invest-grid, .platform-rec, .footer-top, .intro-letter, .section-header { grid-template-columns: 1fr; }
   .section-header { gap: 24px; margin-bottom: 60px; }
@@ -1094,39 +1090,56 @@ section { position: relative; }
   .phase { grid-template-columns: 1fr; gap: 16px; padding: 28px; }
   .opportunity { padding: 40px 28px; }
   .container { padding: 0 24px; }
-  .hero { padding: 120px 0 60px; }
+  .hero { padding: 100px 0 60px; }
   .section { padding: 80px 0; }
+  .team-grid { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 640px) {
   .capabilities-grid { grid-template-columns: 1fr; }
-  .about-stats { grid-template-columns: 1fr; gap: 24px; }
+  .about-stats { grid-template-columns: repeat(2, 1fr); gap: 24px; }
   .platform-compare { grid-template-columns: 1fr; }
   .hero-title .row-two { padding-left: 0; }
   .platform-rec, .opportunity { padding: 40px 24px; }
+  .hero { padding: 80px 0 48px; }
+  .section { padding: 64px 0; }
+  .hero-title .bolt-inline { width: 1em !important; height: 1em !important; vertical-align: -0.1em !important; }
+  .contact-title { font-size: clamp(40px, 9vw, 160px); }
+  .logo-lockup { padding: 20px 24px; }
+  .team-grid { grid-template-columns: repeat(2, 1fr); }
+  .hero-meta { gap: 16px; margin-bottom: 40px; }
+  .hero-footer { margin-top: 48px; }
+  #pw-input { width: min(320px, calc(100vw - 48px)) !important; }
+  .next-steps { gap: 40px; }
+  .phase-num { font-size: 36px; }
 }
 
 /* ============ ANIMATION: fade-up on scroll ============ */
 .fade-up { opacity: 0; transform: translateY(24px); transition: opacity 0.8s ease, transform 0.8s ease; }
 .fade-up.visible { opacity: 1; transform: translateY(0); }
+
 </style>
 </head>
 <body>
+<style>
+#pw-input:-webkit-autofill,
+#pw-input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 1000px #0a0a0a inset !important;
+  -webkit-text-fill-color: #fff !important;
+  caret-color: #fff;
+}
+</style>
 <!-- Password Gate -->
-<div id="pw-gate" style="position:fixed;inset:0;z-index:99999;background:#0a0a0a;display:flex;align-items:center;justify-content:center;font-family:'Inter',sans-serif;">
-  <div style="text-align:center;padding:48px 40px;background:#111;border:1px solid #222;border-radius:16px;width:100%;max-width:360px;box-shadow:0 32px 80px rgba(0,0,0,0.6);">
-    <div style="font-size:13px;letter-spacing:0.12em;text-transform:uppercase;color:#666;margin-bottom:24px;">Protected Document</div>
-    <div style="font-size:22px;font-weight:600;color:#fff;margin-bottom:8px;">Little House × StockIQ</div>
-    <div style="font-size:14px;color:#555;margin-bottom:32px;">Enter the password to view this proposal.</div>
-    <input id="pw-input" type="password" placeholder="Password" autocomplete="current-password"
-      style="width:100%;box-sizing:border-box;padding:12px 16px;background:#1a1a1a;border:1px solid #2a2a2a;border-radius:8px;color:#fff;font-size:15px;outline:none;margin-bottom:12px;transition:border 0.2s;"
+<div id="pw-gate" style="position:fixed;inset:0;z-index:99999;background:#0a0a0a;display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:'Inter',sans-serif;">
+  <div style="font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:#666;margin-bottom:56px;">Little House × StockIQ</div>
+  <div style="position:relative;width:min(320px,calc(100vw - 48px));">
+    <input id="pw-input" type="password" placeholder="Enter password" autocomplete="current-password"
+      style="background:transparent;border:none;border-bottom:1px solid #2a2a2a;color:#fff;font-size:32px;font-weight:300;letter-spacing:0.06em;text-align:center;width:100%;box-sizing:border-box;padding-bottom:16px;padding-right:48px;outline:none;transition:border-color 0.3s;caret-color:#fff;"
       onkeydown="if(event.key==='Enter')checkPw()"
-      onfocus="this.style.borderColor='#444'" onblur="this.style.borderColor='#2a2a2a'">
-    <div id="pw-error" style="font-size:12px;color:#e05252;margin-bottom:12px;min-height:16px;"></div>
-    <button onclick="checkPw()"
-      style="width:100%;padding:13px;background:#fff;color:#000;font-size:14px;font-weight:600;border:none;border-radius:8px;cursor:pointer;letter-spacing:0.02em;">
-      View Proposal
-    </button>
+      onfocus="this.style.borderBottomColor='#555'" onblur="this.style.borderBottomColor='#2a2a2a'">
+    <span onclick="togglePw()" style="position:absolute;right:4px;bottom:18px;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:#3a3a3a;cursor:pointer;user-select:none;transition:color 0.2s;" id="pw-toggle">Show</span>
   </div>
+  <div id="pw-error" style="font-size:12px;color:#555;margin-top:20px;min-height:16px;letter-spacing:0.04em;"></div>
+  <button onclick="checkPw()" style="margin-top:8px;padding:14px 36px;background:#fff;color:#0a0a0a;font-size:12px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;border:none;border-radius:100px;cursor:pointer;transition:opacity 0.2s;" onmouseover="this.style.opacity='0.8'" onmouseout="this.style.opacity='1'">View Proposal</button>
 </div>
 <script>
 (function(){
@@ -1134,6 +1147,12 @@ section { position: relative; }
   if(sessionStorage.getItem(SESSION_KEY)==='1'){
     document.getElementById('pw-gate').style.display='none';
   }
+  window.togglePw=function(){
+    var input=document.getElementById('pw-input');
+    var toggle=document.getElementById('pw-toggle');
+    if(input.type==='password'){input.type='text';toggle.textContent='Hide';toggle.style.color='#666';}
+    else{input.type='password';toggle.textContent='Show';toggle.style.color='#3a3a3a';}
+  };
   window.checkPw=function(){
     var v=document.getElementById('pw-input').value;
     if(v==='stockiq26'){
@@ -1141,7 +1160,7 @@ section { position: relative; }
       document.getElementById('pw-gate').style.display='none';
     } else {
       var err=document.getElementById('pw-error');
-      err.textContent='Incorrect password. Try again.';
+      err.textContent='Incorrect password';
       document.getElementById('pw-input').value='';
       document.getElementById('pw-input').focus();
     }
@@ -1151,9 +1170,7 @@ section { position: relative; }
 
 <!-- Intro Curtain -->
 <div class="intro-curtain" aria-hidden="true">
-  <svg class="bolt-intro" viewBox="0 0 60 100" fill="none">
-    <path d="M35 0 L5 55 L25 55 L15 100 L55 40 L35 40 L45 0 Z" fill="#D4FF3F"/>
-  </svg>
+  <img class="bolt-intro" src="images/bolt.svg" alt="">
 </div>
 
 <!-- SVG Sprites (reusable) -->
@@ -1224,11 +1241,11 @@ section { position: relative; }
     <div class="hero-meta">
       <div class="hero-meta-block">
         <span class="overline">Prepared For</span>
-        <span class="value">StockIQ — Rebrand & Website Redesign</span>
+        <span class="value">StockIQ, Rebrand & Website Redesign</span>
       </div>
       <div class="hero-meta-block">
         <span class="overline">Phase 1 Proposal</span>
-        <span class="value">April 2026 · Due May 11</span>
+        <span class="value">May 2026 · Submitted May 11</span>
       </div>
       <div class="hero-meta-block">
         <span class="overline">Submitted By</span>
@@ -1238,15 +1255,15 @@ section { position: relative; }
 
     <h1 class="hero-title display">
       <span class="row">Simply</span>
-      <span class="row row-two">Powerful<svg class="bolt-inline"><use href="#bolt" class="bolt-svg"/></svg></span>
-      <span class="row"><span class="multiply">by</span>design.</span>
+      <span class="row row-two">Powerful<img class="bolt-inline" src="images/smiley.png" alt="" style="width:1.5em;height:1.5em;object-fit:contain;vertical-align:-0.2em;"></span>
+      <span class="row"><span class="multiply">by</span> Design.</span>
     </h1>
 
     <div class="hero-footer">
       <p class="hero-subtitle">
-        Our response to your brief — a partnership proposal to translate StockIQ's <span class="accent">inflection point</span> into a brand and digital experience that commands the category.
+        Our response to your brief. A proposal to take StockIQ's <span class="accent">next chapter</span> from concept to a full brand and web launch by October.
       </p>
-      <span class="scroll-cue"><span class="dot"></span> Scroll to explore</span>
+      <button class="scroll-cue" onclick="document.getElementById('overview').scrollIntoView({behavior:'smooth'})"><span class="arrow-down"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 3v10M3 9l5 5 5-5" stroke="#020202" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Scroll to explore</button>
     </div>
   </div>
 </header>
@@ -1255,10 +1272,10 @@ section { position: relative; }
 <section class="section" id="overview">
   <div class="container">
     <div class="intro-letter">
-      <div class="overline">01 — Opening</div>
+      <div class="overline">01 / Opening</div>
       <div class="intro-letter-body">
-        <p>StockIQ is at a defining moment. New investment, growing enterprise traction, and a sharpened product position — this isn't a refresh, <span class="hl">it's a reset</span>.</p>
-        <p>That kind of moment needs more than design. It needs alignment between <strong>strategy, identity, and execution</strong> — all moving fast toward a fixed October deadline.</p>
+        <p>StockIQ has new investment, real enterprise traction, and a product position that's finally starting to click. This isn't a refresh, it's a reset.</p>
+        <p>That calls for more than design. It calls for <strong>strategy, identity, and execution</strong> working together and moving fast toward a fixed October deadline.</p>
         <p class="muted" style="font-size:18px; margin-top:32px;">That's where we do our best work.</p>
       </div>
     </div>
@@ -1269,17 +1286,17 @@ section { position: relative; }
 <section class="section section-dark" id="about">
   <div class="container">
     <div class="section-header">
-      <div class="overline">02 — Who we are</div>
+      <div class="overline">02 / Who we are</div>
       <h2 class="section-title">A small & mighty studio, <span class="serif-accent">powered by experience.</span></h2>
     </div>
 
     <div class="about-grid">
       <div>
         <p class="body-lg" style="color:#D4D0BE; margin-bottom: 24px;">
-          Little House is a full-service brand and digital studio based in Los Angeles. We partner with ambitious companies — from Fortune 500s like Marriott to scaling SaaS teams — to translate complexity into clarity.
+          Little House is a brand and digital studio based in Los Angeles. We've built brands and digital experiences for some of the most recognizable names in hospitality, retail, and consumer, and we bring that same level of craft to every engagement.
         </p>
         <p class="body-md muted">
-          We consider ourselves an extension of your team. Reliable turnarounds, senior-level craft, and a bias toward shipping. For StockIQ, that means a dedicated strategy, design, and development pod moving in lockstep from kickoff through launch.
+          We work as an extension of your team. Senior-level thinking, fast turnarounds, and a genuine commitment to getting it right. For StockIQ, that means one dedicated team moving from strategy through launch without losing momentum or creative quality.
         </p>
 
         <div class="about-stats">
@@ -1308,23 +1325,23 @@ section { position: relative; }
           <div class="value-card">
             <div class="value-card-head">
               <div class="value-card-num">01</div>
-              <div class="value-card-title">Care — not just deliverables</div>
+              <div class="value-card-title">Care, not just deliverables</div>
             </div>
-            <p>We don't transact on scopes. We invest in your business, your team, and your trajectory. Most of our relationships span years, not projects.</p>
+            <p>We get into it. We care about your business, your team, and where you're headed. Most of our client relationships stretch well beyond the original scope.</p>
           </div>
           <div class="value-card">
             <div class="value-card-head">
               <div class="value-card-num">02</div>
               <div class="value-card-title">Reliable turnarounds</div>
             </div>
-            <p>Built for hard deadlines. We've delivered event-driven rebrands and full site launches on tighter timelines than yours — without compromising craft.</p>
+            <p>Built for hard deadlines. We've delivered event-driven rebrands and full site launches on tighter timelines than yours, without compromising craft.</p>
           </div>
           <div class="value-card">
             <div class="value-card-head">
               <div class="value-card-num">03</div>
               <div class="value-card-title">Range without generic</div>
             </div>
-            <p>Every project is different. Our portfolio spans boutique hospitality, B2B SaaS, real estate, and enterprise — and none of it looks the same.</p>
+            <p>Every project is different, and we treat it that way. Our work spans boutique hospitality, real estate, enterprise, and CPG, and none of it looks the same.</p>
           </div>
         </div>
       </div>
@@ -1341,39 +1358,39 @@ section { position: relative; }
 <section class="section" id="team" style="background: var(--cream-dark);">
   <div class="container">
     <div class="section-header">
-      <div class="overline">03 — Project Team</div>
-      <h2 class="section-title">The people <span class="serif-accent">on the work.</span></h2>
+      <div class="overline">03 / Project Team</div>
+      <h2 class="section-title">The team <span class="serif-accent">behind the work.</span></h2>
     </div>
     <p class="capabilities-intro muted" style="margin-bottom: 60px;">
-      A senior, integrated pod assembled specifically for StockIQ — combining Little House's design and project leadership with our trusted brand strategy and development partners. One accountable team, no handoffs.
+      We assembled this team specifically for StockIQ. Little House leads design and project management, with our strategy and development partners brought in for their depth in each area. You'll always know who's responsible for what.
     </p>
 
     <div class="team-block">
       <div class="team-block-title">
-        <h3>Little House — Project Leadership</h3>
+        <h3>Little House / Project Leadership</h3>
         <span class="meta">Brand · Design · Project Management · Studio</span>
       </div>
       <div class="team-grid">
         <div class="team-card">
-          <div class="avatar lime">ED<span class="badge-bolt"><svg viewBox="0 0 60 100"><use href="#bolt"/></svg></span></div>
+          <img class="avatar" src="team headshots/eugene-profile-image.jpg" alt="Eugene David">
           <div class="team-name">Eugene David</div>
           <div class="team-role">Founder · Design Director</div>
           <div class="team-bio">Leads the engagement end-to-end and personally directs creative output across brand and web.</div>
         </div>
         <div class="team-card">
-          <div class="avatar ink">MH</div>
+          <img class="avatar" src="team headshots/Melissa-Harrison-Headshot.jpg" alt="Melissa Harrison">
           <div class="team-name">Melissa Harrison</div>
           <div class="team-role">Project Manager</div>
           <div class="team-bio">Owns timeline, deliverables, and day-to-day collaboration with your internal team and partners.</div>
         </div>
         <div class="team-card">
-          <div class="avatar cream">SJ</div>
+          <img class="avatar" src="team headshots/Stef.jpg" alt="Stef Jerez">
           <div class="team-name">Stef Jerez</div>
           <div class="team-role">Lead Designer</div>
           <div class="team-bio">Drives the visual identity system, design language, and high-fidelity website design.</div>
         </div>
         <div class="team-card">
-          <div class="avatar lime">DS<span class="badge-bolt"><svg viewBox="0 0 60 100"><use href="#bolt"/></svg></span></div>
+          <img class="avatar" src="team headshots/dave.jpg" alt="David Suárez">
           <div class="team-name">David Suárez</div>
           <div class="team-role">UI / UX Designer</div>
           <div class="team-bio">Architects the user experience, sitemap, and interface system for the new stockiqtech.com.</div>
@@ -1388,25 +1405,25 @@ section { position: relative; }
       </div>
       <div class="team-grid">
         <div class="team-card">
-          <div class="avatar ink">CH</div>
+          <img class="avatar" src="team headshots/chip.jpg" alt="Chip Humitz">
           <div class="team-name">Chip Humitz</div>
           <div class="team-role">Brand Strategist</div>
           <div class="team-bio">Long-term, big-picture lens to brand strategy across automotive, CPG, QSR, retail, B2B, and gaming. Defines what brands stand for and builds durable competitive advantage.</div>
         </div>
         <div class="team-card">
-          <div class="avatar cream">SV</div>
+          <img class="avatar" src="team headshots/sam.jpg" alt="Sam Van Camp">
           <div class="team-name">Sam Van Camp</div>
           <div class="team-role">Brand Strategist</div>
-          <div class="team-bio">Research-driven, execution-focused strategy with experience across Fortune 50, nonprofits, and startups. Specializes in turning insights into action — positioning, CRM, channel.</div>
+          <div class="team-bio">Research-driven, execution-focused strategy with experience across Fortune 50, nonprofits, and startups. Specializes in turning insights into action: positioning, CRM, channel.</div>
         </div>
         <div class="team-card">
-          <div class="avatar ink">NS</div>
+          <img class="avatar" src="team headshots/navroop.jpg" alt="Navroop Sehmi">
           <div class="team-name">Navroop Sehmi</div>
           <div class="team-role">Founder · Rumor Avenue</div>
-          <div class="team-bio">Leads end-to-end product development for startups, VC, and PE-backed companies — helping teams build, launch, and scale complex digital products with speed and clarity.</div>
+          <div class="team-bio">Leads end-to-end product development for startups, VC, and PE-backed companies, helping teams build, launch, and scale complex digital products with speed and clarity.</div>
         </div>
         <div class="team-card">
-          <div class="avatar lime">BW<span class="badge-bolt"><svg viewBox="0 0 60 100"><use href="#bolt"/></svg></span></div>
+          <img class="avatar" src="team headshots/benjamin-worwa.jpg" alt="Benjamin Worwa">
           <div class="team-name">Benjamin Worwa</div>
           <div class="team-role">CTO · 7Q81</div>
           <div class="team-bio">Full-stack development partner specializing in Shopify, Laravel, Webflow, and WordPress. Translates vision into scalable, market-ready experiences built for performance.</div>
@@ -1420,11 +1437,11 @@ section { position: relative; }
 <section class="section" id="capabilities">
   <div class="container">
     <div class="section-header">
-      <div class="overline">04 — Capabilities</div>
-      <h2 class="section-title">What we <span class="serif-accent">do very well.</span></h2>
+      <div class="overline">04 / Capabilities</div>
+      <h2 class="section-title">What we do <span class="serif-accent">very well.</span></h2>
     </div>
     <p class="capabilities-intro muted">
-      Brand strategy, identity, copywriting, UX, and development — all under one roof. For StockIQ, that means one accountable team, one connected narrative, and zero handoff friction.
+      Brand strategy, identity, copywriting, UX, and development, all in one place. For StockIQ, that means the story we build in strategy carries directly into design, and from design straight into the build. Nothing gets lost in translation.
     </p>
 
     <div class="capabilities-grid">
@@ -1484,7 +1501,7 @@ section { position: relative; }
 <section class="section" id="work" style="background: #E8E5D9;">
   <div class="container">
     <div class="section-header">
-      <div class="overline">05 — Selected Work</div>
+      <div class="overline">05 / Selected Work</div>
       <h2 class="section-title">Brands we've <span class="serif-accent">helped shine.</span></h2>
     </div>
 
@@ -1500,10 +1517,10 @@ section { position: relative; }
             <span class="case-tag">Ongoing since 2019</span>
           </div>
         </div>
-        <p class="case-desc">Little House serves as Marriott's Global Business Communications go-to design team — visual identity, presentation design, infographics, video editing, and custom graphics across CEC, Distribution & Revenue, Digital & Technology, and Global Leaders. <span class="case-link-cue">View case study →</span></p>
+        <p class="case-desc">For over seven years, Little House has been Marriott's Global Business Communications design team. Visual identity, presentations, infographics, video, and custom graphics across CEC, Distribution & Revenue, Digital & Technology, and Global Leadership. <span class="case-link-cue">View case study →</span></p>
         <div class="case-arrow"><svg width="20" height="20"><use href="#arrow-up-right"/></svg></div>
         <blockquote class="case-quote">
-          "Little House operates like a true business partner — collaboration and reliability are key ingredients to their success and why we often consider them an extension of our own internal team."
+          "Little House operates like a true business partner. Collaboration and reliability are key ingredients to their success and why we often consider them an extension of our own internal team."
           <footer>Scott Key · VP, Global Internal Communications · Marriott International</footer>
         </blockquote>
       </a>
@@ -1518,26 +1535,12 @@ section { position: relative; }
             <span class="case-tag">Editorial Identity</span>
           </div>
         </div>
-        <p class="case-desc">A brand identity refresh and Shopify UX redesign for the beloved Spanish specialty food retailer — modernizing the look and feel while preserving its artisanal heritage. The result is a refined visual identity and elevated shopping experience that bring the story and products to life through thoughtful design and intuitive navigation. <span class="case-link-cue">View case study →</span></p>
-        <div class="case-arrow"><svg width="20" height="20"><use href="#arrow-up-right"/></svg></div>
-      </a>
-
-      <a class="case-study" href="https://arcsurfaces.com/" target="_blank" rel="noopener">
-        <div class="case-num">03</div>
-        <div>
-          <h3 class="case-title">Architectural Surfaces</h3>
-          <div class="case-tags">
-            <span class="case-tag">B2B</span>
-            <span class="case-tag">Building Materials</span>
-            <span class="case-tag">Website</span>
-          </div>
-        </div>
-        <p class="case-desc">We partnered with Architectural Surfaces to reimagine their digital experience — balancing usability with premium presentation. The redesign streamlined their extensive product inventory into a simple, easy-to-navigate experience, letting users explore materials by type, application, and style while maintaining the elevated feel that reflects the quality of their products and brand. <span class="case-link-cue">Visit live site →</span></p>
+        <p class="case-desc">A brand refresh and Shopify redesign for one of the West Coast's most beloved specialty food retailers. We modernized the look without losing the character, then rebuilt the shopping experience from the ground up to match. <span class="case-link-cue">View case study →</span></p>
         <div class="case-arrow"><svg width="20" height="20"><use href="#arrow-up-right"/></svg></div>
       </a>
 
       <a class="case-study" href="https://littlehouse.studio/portfolio/purel-leaf-website/" target="_blank" rel="noopener">
-        <div class="case-num">04</div>
+        <div class="case-num">03</div>
         <div>
           <h3 class="case-title">Pure Leaf</h3>
           <div class="case-tags">
@@ -1546,13 +1549,12 @@ section { position: relative; }
             <span class="case-tag">Consumer</span>
           </div>
         </div>
-        <p class="case-desc">Website development partnership for PepsiCo's Pure Leaf brand — built in close collaboration with our development partner Rumor Avenue. The site raises awareness of the brand's mission and purpose while featuring recipes, initiatives, and a product locator, all delivered through a seamless user experience at pureleaf.com. <span class="case-link-cue">View case study →</span></p>
+        <p class="case-desc">Built the brand website for PepsiCo's Pure Leaf in close collaboration with our development partner Rumor Avenue. Mission-driven storytelling, recipes, initiatives, and a product locator, all at pureleaf.com. <span class="case-link-cue">View case study →</span></p>
         <div class="case-arrow"><svg width="20" height="20"><use href="#arrow-up-right"/></svg></div>
       </a>
 
     </div>
 
-    <p style="margin-top: 32px; font-size: 13px; color: var(--muted); font-style: italic;">More work, including B2B SaaS and category-defining brands, available on request.</p>
   </div>
 </section>
 
@@ -1560,8 +1562,8 @@ section { position: relative; }
 <section class="section" id="approach">
   <div class="container">
     <div class="section-header">
-      <div class="overline">06 — Our Approach</div>
-      <h2 class="section-title">Strategy informs design. <span class="serif-accent">Design drives performance.</span></h2>
+      <div class="overline">06 / Our Approach</div>
+      <h2 class="section-title">Strategy informs design.<br><span class="serif-accent">Design drives performance.</span></h2>
     </div>
 
     <div class="opportunity">
@@ -1578,7 +1580,7 @@ section { position: relative; }
           <div class="tick"><svg width="12" height="12"><use href="#check"/></svg></div>
           <div>
             <h5>Simply Powerful, made visible</h5>
-            <p>A brand system that carries both halves — strength and simplicity — without compromise.</p>
+            <p>A brand system that carries both halves: strength and simplicity, without compromise.</p>
           </div>
         </div>
         <div class="opportunity-point">
@@ -1599,7 +1601,7 @@ section { position: relative; }
           <div class="tick"><svg width="12" height="12"><use href="#check"/></svg></div>
           <div>
             <h5>Launched in time for October</h5>
-            <p>Event-driven rebrand discipline — fixed dates, sequenced deliverables, zero scope drift.</p>
+            <p>Event-driven rebrand discipline: fixed dates, sequenced deliverables, zero scope drift.</p>
           </div>
         </div>
       </div>
@@ -1613,7 +1615,7 @@ section { position: relative; }
           <div class="phase-meta">Phase 1 · June 2026</div>
         </div>
         <div class="phase-body">
-          <p>We begin by grounding the work in clarity. StockIQ already has a strong directional foundation — our job is to sharpen it into a system that guides every downstream decision from UX to sales conversations.</p>
+          <p>StockIQ already has a point of view. Our job is to sharpen it into something concrete: a positioning platform that informs everything from the homepage headline to how your sales team tells the story.</p>
           <p style="margin-top:12px; opacity:0.7; font-size:13px;"><strong>Deliverables:</strong> Positioning matrix · Category framing · Messaging architecture · Tone of voice guidelines</p>
         </div>
       </div>
@@ -1625,7 +1627,7 @@ section { position: relative; }
           <div class="phase-meta">Phase 2 · June–July 2026</div>
         </div>
         <div class="phase-body">
-          <p>The opportunity is to break away from the visual sameness of the category. Most SaaS brands default to muted palettes and abstract grids. StockIQ should feel different — balancing power (structure, confidence) and simplicity (approachability, usability).</p>
+          <p>Most supply chain platforms look the same: muted blues, abstract data imagery, stock photography of warehouses. StockIQ has a chance to look completely different. Bold where others are safe, clear where others are cluttered.</p>
           <p style="margin-top:12px; opacity:0.7; font-size:13px;"><strong>Deliverables:</strong> Logo system · Type system · Color palette · Iconography · Brand guidelines · Logo finalized by end of July</p>
         </div>
       </div>
@@ -1649,7 +1651,7 @@ section { position: relative; }
           <div class="phase-meta">Phase 4 · Post-Launch</div>
         </div>
         <div class="phase-body">
-          <p>Post-launch retainer to extend and evolve the brand — new pages, campaign creative, product launch enablement. As StockIQ's product and positioning keep evolving, the brand system evolves with you.</p>
+          <p>The brand doesn't stop at launch. This retainer keeps us in your corner for new pages, campaign creative, and whatever the next product moment requires. As StockIQ grows, the brand grows with it.</p>
           <p style="margin-top:12px; opacity:0.7; font-size:13px;"><strong>Deliverables:</strong> Monthly retainer · On-demand creative · Brand governance · New page builds</p>
         </div>
       </div>
@@ -1666,7 +1668,7 @@ section { position: relative; }
           <svg width="12" height="12"><use href="#zap"/></svg> Platform Recommendation
         </span>
         <h3>Build it in <span class="lime">Webflow.</span></h3>
-        <p>Webflow delivers higher design fidelity without compromising development speed — critical for hitting your October deadline.</p>
+        <p>Webflow delivers higher design fidelity without compromising development speed, critical for hitting your October deadline.</p>
         <p>Its flexible CMS lets your team manage and scale content without heavy developer reliance. We're fully capable in WordPress, but for this project, Webflow is the faster, more agile choice.</p>
       </div>
       <div class="platform-compare" style="position: relative; z-index: 2;">
@@ -1699,8 +1701,8 @@ section { position: relative; }
 <section class="section" id="timeline" style="background: var(--cream-dark);">
   <div class="container">
     <div class="section-header">
-      <div class="overline">07 — Timeline</div>
-      <h2 class="section-title">Sequenced for your <span class="serif-accent">October launch.</span></h2>
+      <div class="overline">07 / Timeline</div>
+      <h2 class="section-title">Sequenced for your<br><span class="serif-accent">October launch.</span></h2>
     </div>
 
     <div class="timeline-track">
@@ -1734,11 +1736,11 @@ section { position: relative; }
     <div class="milestones-grid">
       <div class="milestone">
         <div class="date">End of July 2026</div>
-        <div class="event">Logo finalized and ready to anchor downstream work.</div>
+        <div class="event">Logo finalized and signed off, ready for everything downstream.</div>
       </div>
       <div class="milestone">
         <div class="date">Last Week of September</div>
-        <div class="event">Website fully functional and handed to QA — with SEO migration preserved.</div>
+        <div class="event">Website handed to QA, SEO migration complete and accounted for.</div>
       </div>
       <div class="milestone">
         <div class="date">October 2026</div>
@@ -1752,8 +1754,8 @@ section { position: relative; }
 <section class="section section-dark" id="investment">
   <div class="container">
     <div class="section-header">
-      <div class="overline">08 — Investment</div>
-      <h2 class="section-title">Pricing that matches the <span class="serif-accent">scope of ambition.</span></h2>
+      <div class="overline">08 / Investment</div>
+      <h2 class="section-title">Pricing that matches<br>the <span class="serif-accent">scope of ambition.</span></h2>
     </div>
 
     <div class="invest-toggle" role="tablist" aria-label="Pricing tier" id="invest-toggle">
@@ -1767,7 +1769,7 @@ section { position: relative; }
 
       <div class="retainer-card">
         <h4>Ongoing Support</h4>
-        <p>Post-launch monthly retainer — pick the level of partnership that fits your cadence.</p>
+        <p>Post-launch monthly retainer. Pick the level of partnership that fits your cadence.</p>
         <div id="retainer-list"><!-- Populated by JS from PRICING config --></div>
       </div>
     </div>
@@ -1778,14 +1780,14 @@ section { position: relative; }
 <section class="section" id="questions">
   <div class="container">
     <div class="section-header">
-      <div class="overline">09 — Questions for You</div>
-      <h2 class="section-title">A few things to <span class="serif-accent">refine our approach.</span></h2>
+      <div class="overline">09 / Questions for You</div>
+      <h2 class="section-title">A few things to<br><span class="serif-accent">refine our approach.</span></h2>
     </div>
 
     <div class="questions-grid">
       <div class="question-card">
         <div class="q-num">Q1</div>
-        <p>How aligned is your internal team on messaging today — and where do you expect the most friction?</p>
+        <p>How aligned is your internal team on messaging right now, and where do you expect the biggest disagreements?</p>
       </div>
       <div class="question-card">
         <div class="q-num">Q2</div>
@@ -1793,11 +1795,11 @@ section { position: relative; }
       </div>
       <div class="question-card">
         <div class="q-num">Q3</div>
-        <p>How expansive do you anticipate the website at launch vs. post-launch? What's must-ship vs. nice-to-have?</p>
+        <p>How big is the website at launch? What has to ship in October and what can wait?</p>
       </div>
       <div class="question-card">
         <div class="q-num">Q4</div>
-        <p>What level of involvement will your SEO partner have during migration? How will we sequence our collaboration?</p>
+        <p>Do you have an SEO partner involved in the migration? If so, how do you see us working together on that handoff?</p>
       </div>
       <div class="question-card">
         <div class="q-num">Q5</div>
@@ -1805,7 +1807,7 @@ section { position: relative; }
       </div>
       <div class="question-card">
         <div class="q-num">Q6</div>
-        <p>What does "winning" look like six months after the October launch — and which metrics would tell you we got there?</p>
+        <p>What does "winning" look like six months after the October launch, and which metrics would tell you we got there?</p>
       </div>
     </div>
   </div>
@@ -1815,20 +1817,20 @@ section { position: relative; }
 <section class="section section-dark" id="contact" style="padding-bottom: 60px;">
   <div class="container">
     <div class="contact-hero">
-      <div class="overline" style="color: var(--lime); margin-bottom: 20px;">10 — Let's Build This</div>
+      <div class="overline" style="color: var(--lime); margin-bottom: 20px;">10 / Let's Build</div>
       <h2 class="contact-title">
-        Ready<svg class="bolt-inline"><use href="#bolt" class="bolt-svg"/></svg>when you are.
+        Ready When<br>You Are.
       </h2>
       <p class="body-lg" style="max-width: 620px; margin: 32px auto 0; color: #C4C4BE;">
-        We'd love the chance to walk through this with your team. Let's set up a discovery call and get moving toward October.
+        We'd like to walk through this with you. A quick call goes a long way, and October isn't that far off.
       </p>
 
       <div class="contact-actions">
         <a href="mailto:eugene@littlehouse.studio?subject=StockIQ%20%E2%80%94%20RFP%20Follow-up" class="btn btn-primary">
           <svg width="16" height="16"><use href="#zap"/></svg>
-          Email Eugene
+          Email Us
         </a>
-        <a href="#approach" class="btn btn-secondary">Review Our Approach</a>
+        <a href="#overview" class="btn btn-secondary">Start from the Top</a>
       </div>
     </div>
 
@@ -1836,17 +1838,17 @@ section { position: relative; }
       <div class="next-step-card">
         <div class="step-num">1</div>
         <h5>Discovery Call</h5>
-        <p>Schedule a 45-minute call with Eugene and our strategy lead to walk through the approach and answer open questions.</p>
+        <p>A 45-minute call with Eugene and our strategy lead to walk through the proposal and answer any questions you have.</p>
       </div>
       <div class="next-step-card">
         <div class="step-num">2</div>
         <h5>Phase 2 Submission</h5>
-        <p>If shortlisted, we'll submit a customized Phase 2 proposal by May 26 — with creative direction, visual references, and client references tailored to StockIQ.</p>
+        <p>If shortlisted, we'll submit a customized Phase 2 proposal by May 26, with creative direction, visual references, and client references tailored to StockIQ.</p>
       </div>
       <div class="next-step-card">
         <div class="step-num">3</div>
         <h5>Kickoff in June</h5>
-        <p>Following your leadership offsite decision, we'll mobilize our pod, schedule kickoff within a week, and begin strategy work immediately.</p>
+        <p>Once you're ready to move forward, we schedule kickoff within a week and hit the ground running on strategy.</p>
       </div>
     </div>
   </div>
@@ -1858,7 +1860,7 @@ section { position: relative; }
     <div class="footer-top">
       <div>
         <img class="footer-logo" src="data:image/png;base64,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" alt="Little House" />
-        <p style="margin-top: 20px; max-width: 400px; color: #A8A8A0; font-size: 14px; line-height: 1.55;">We help companies shine through design. Brand, web, and creative partnership for teams at inflection points.</p>
+        <p style="margin-top: 20px; max-width: 400px; color: #A8A8A0; font-size: 14px; line-height: 1.55;">Brand strategy, identity, and digital design for companies doing something worth noticing.</p>
       </div>
       <div class="footer-contact">
         <div>
@@ -1871,12 +1873,12 @@ section { position: relative; }
         </div>
         <div>
           <div class="label">Prepared</div>
-          <div>April 2026 · Phase 1 Proposal for StockIQ</div>
+          <div>May 2026 · Phase 1 Proposal for StockIQ</div>
         </div>
       </div>
     </div>
     <div class="footer-bottom">
-      <div>© 2026 Little House Big Idea, Inc. — Confidential. All Rights Reserved.</div>
+      <div>© 2026 Little House Big Idea, Inc.,Confidential. All Rights Reserved.</div>
       <div>Prepared exclusively for StockIQ leadership review.</div>
     </div>
   </div>
@@ -1884,14 +1886,14 @@ section { position: relative; }
 
 <script>
 /* ╔══════════════════════════════════════════════════════════════════════════╗
-   ║  EDIT PRICING HERE  —  All numbers below drive the Investment section.   ║
+   ║  EDIT PRICING HERE , All numbers below drive the Investment section.   ║
    ║  Update line items, totals, and retainer tiers in this single object.    ║
    ╚══════════════════════════════════════════════════════════════════════════╝ */
 const PRICING = {
   tiers: {
     full: {
       label: 'Full Rebrand',
-      tagline: 'Recommended — full-depth rebrand',
+      tagline: 'Recommended, full-depth rebrand',
       lines: [
         { title: 'Brand Strategy',                    desc: 'Positioning, narrative, tone of voice', price: '$14,000' },
         { title: 'Branding + Visual Identity System', desc: 'Logo, type, palette, iconography, guidelines', price: '$12,000' },
