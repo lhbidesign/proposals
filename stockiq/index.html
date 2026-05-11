@@ -1099,6 +1099,8 @@ img.avatar {
   /* Mobile line breaks */
   br.mob { display: inline; }
   .mob-br { display: block; height: 0; overflow: hidden; font-size: 0; line-height: 0; }
+  .mob-only { display: block; }
+  .desk-only { display: none; }
   .capabilities-grid { grid-template-columns: 1fr; }
   .about-stats { grid-template-columns: repeat(2, 1fr); gap: 24px; }
   .platform-compare { grid-template-columns: 1fr; }
@@ -1124,7 +1126,7 @@ img.avatar {
   .hero-meta { order: 2; margin-top: 40px; margin-bottom: 0; gap: 16px; }
   .hero-subtitle { order: 3; }
   .hero-footer { order: 4; }
-  .hero-title .row-two { padding-left: 0; }
+  .hero-title .row-two { padding-left: 0; margin-top: 0; }
   .hero-title .bolt-inline { width: 1em !important; height: 1em !important; vertical-align: -0.1em !important; }
 
   /* Team: 1 per row */
@@ -1141,7 +1143,9 @@ img.avatar {
   .case-quote { grid-column: 1 / -1; }
 }
 
-/* Mobile-only line breaks */
+/* Mobile-only title versions */
+.mob-only { display: none; }
+.desk-only { display: inline; }
 br.mob { display: none; }
 .mob-br { display: none; }
 
@@ -1343,8 +1347,8 @@ br.mob { display: none; }
             <div class="stat-label">Seasoned Designers, Strategists & Developers</div>
           </div>
           <div>
-            <div class="stat-value">7</div>
-            <div class="stat-label">Years Partnering with Marriott International</div>
+            <div class="stat-value">7+</div>
+            <div class="stat-label">Avg. Years Per Client Relationship</div>
           </div>
           <div>
             <div class="stat-value">100%</div>
@@ -1397,7 +1401,10 @@ br.mob { display: none; }
   <div class="container">
     <div class="section-header">
       <div class="overline">03 / Project Team</div>
-      <h2 class="section-title">The team<span class="mob-br"></span><span class="serif-accent">behind the work.</span></h2>
+      <h2 class="section-title">
+        <span class="desk-only">The team <span class="serif-accent">behind the work.</span></span>
+        <span class="mob-only">The team<br><span class="serif-accent">behind the work.</span></span>
+      </h2>
     </div>
     <p class="capabilities-intro muted" style="margin-bottom: 60px;">
       We assembled this team specifically for StockIQ. Little House leads design and project management, with our strategy and development partners brought in for their depth in each area. You'll always know who's responsible for what.
@@ -1476,7 +1483,10 @@ br.mob { display: none; }
   <div class="container">
     <div class="section-header">
       <div class="overline">04 / Capabilities</div>
-      <h2 class="section-title">What we do<span class="mob-br"></span><span class="serif-accent">very well.</span></h2>
+      <h2 class="section-title">
+        <span class="desk-only">What we do <span class="serif-accent">very well.</span></span>
+        <span class="mob-only">What we do<br><span class="serif-accent">very well.</span></span>
+      </h2>
     </div>
     <p class="capabilities-intro muted">
       Brand strategy, identity, copywriting, UX, and development, all in one place. For StockIQ, that means the story we build in strategy carries directly into design, and from design straight into the build. Nothing gets lost in translation.
@@ -1540,7 +1550,10 @@ br.mob { display: none; }
   <div class="container">
     <div class="section-header">
       <div class="overline">05 / Selected Work</div>
-      <h2 class="section-title">Brands we've<span class="mob-br"></span><span class="serif-accent">helped shine.</span></h2>
+      <h2 class="section-title">
+        <span class="desk-only">Brands we've <span class="serif-accent">helped shine.</span></span>
+        <span class="mob-only">Brands we've<br><span class="serif-accent">helped shine.</span></span>
+      </h2>
     </div>
 
     <div class="case-studies">
@@ -1601,7 +1614,10 @@ br.mob { display: none; }
   <div class="container">
     <div class="section-header">
       <div class="overline">06 / Our Approach</div>
-      <h2 class="section-title">Strategy<span class="mob-br"></span>informs design.<br><span class="serif-accent">Design drives<span class="mob-br"></span>performance.</span></h2>
+      <h2 class="section-title">
+        <span class="desk-only">Strategy informs design.<br><span class="serif-accent">Design drives performance.</span></span>
+        <span class="mob-only">Strategy<br>informs design.<br><span class="serif-accent">Design drives<br>performance.</span></span>
+      </h2>
     </div>
 
     <div class="opportunity">
