@@ -1095,8 +1095,9 @@ img.avatar {
   .team-grid { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 640px) {
-  /* Typography */
+  /* Mobile line breaks */
   br.mob { display: inline; }
+  .mob-br { display: block; height: 0; overflow: hidden; font-size: 0; line-height: 0; }
   .capabilities-grid { grid-template-columns: 1fr; }
   .about-stats { grid-template-columns: repeat(2, 1fr); gap: 24px; }
   .platform-compare { grid-template-columns: 1fr; }
@@ -1141,6 +1142,7 @@ img.avatar {
 
 /* Mobile-only line breaks */
 br.mob { display: none; }
+.mob-br { display: none; }
 
 /* ============ ANIMATION: fade-up on scroll ============ */
 .fade-up { opacity: 0; transform: translateY(24px); transition: opacity 0.8s ease, transform 0.8s ease; }
@@ -1394,7 +1396,7 @@ br.mob { display: none; }
   <div class="container">
     <div class="section-header">
       <div class="overline">03 / Project Team</div>
-      <h2 class="section-title">The team<br class="mob"> <span class="serif-accent">behind the work.</span></h2>
+      <h2 class="section-title">The team<span class="mob-br"></span><span class="serif-accent">behind the work.</span></h2>
     </div>
     <p class="capabilities-intro muted" style="margin-bottom: 60px;">
       We assembled this team specifically for StockIQ. Little House leads design and project management, with our strategy and development partners brought in for their depth in each area. You'll always know who's responsible for what.
@@ -1473,7 +1475,7 @@ br.mob { display: none; }
   <div class="container">
     <div class="section-header">
       <div class="overline">04 / Capabilities</div>
-      <h2 class="section-title">What we do<br class="mob"> <span class="serif-accent">very well.</span></h2>
+      <h2 class="section-title">What we do<span class="mob-br"></span><span class="serif-accent">very well.</span></h2>
     </div>
     <p class="capabilities-intro muted">
       Brand strategy, identity, copywriting, UX, and development, all in one place. For StockIQ, that means the story we build in strategy carries directly into design, and from design straight into the build. Nothing gets lost in translation.
@@ -1537,7 +1539,7 @@ br.mob { display: none; }
   <div class="container">
     <div class="section-header">
       <div class="overline">05 / Selected Work</div>
-      <h2 class="section-title">Brands we've<br class="mob"> <span class="serif-accent">helped shine.</span></h2>
+      <h2 class="section-title">Brands we've<span class="mob-br"></span><span class="serif-accent">helped shine.</span></h2>
     </div>
 
     <div class="case-studies">
@@ -1598,7 +1600,7 @@ br.mob { display: none; }
   <div class="container">
     <div class="section-header">
       <div class="overline">06 / Our Approach</div>
-      <h2 class="section-title">Strategy<br class="mob"> informs design.<br><span class="serif-accent">Design drives<br class="mob"> performance.</span></h2>
+      <h2 class="section-title">Strategy<span class="mob-br"></span>informs<span class="mob-br"></span>design.<br><span class="serif-accent">Design drives<span class="mob-br"></span>performance.</span></h2>
     </div>
 
     <div class="opportunity">
